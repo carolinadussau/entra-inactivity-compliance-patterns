@@ -89,6 +89,14 @@ The client secret value (not the secret ID) must be used as the credential passw
 
 ---
 
+## Script Layout
+
+- `scripts/daily_inactivity_report.ps1` generates the inactivity report (no destructive actions).
+- `scripts/auth/` contains authentication reference patterns (client secret and certificate).
+- `scripts/actions/` contains operational scripts:
+  - `preview_actions.ps1` is dry-run only
+  - `disable_from_report.ps1` requires an explicit `-Execute` flag
+
 ## Why This Is Portfolio-Relevant
 
 This project demonstrates:
@@ -96,3 +104,4 @@ This project demonstrates:
 - designing safe automation boundaries for compliance
 - documenting limitations clearly instead of hiding them
 - building auditable, review-first workflows
+
